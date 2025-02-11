@@ -155,33 +155,78 @@ select {
 .sidebar {
     position: fixed;
     top: 0;
-    right: -500px;
+    right: -600px;
     width: 500px;
     height: 100%;
     background-color: #f8f8f8;
     box-shadow: 8px 8px 40px 0px rgba(184, 184, 184, 1);
     transition: 0.3s;
     z-index: 999;
-    padding-top: 60px;
+    padding: 60px 50px;
 }
 
 .sidebar.active {
     right: 0;
 }
 
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
+.sidebar-content {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-.sidebar nav ul li {
-    padding: 10px 20px;
-}
-
-.sidebar nav ul li a {
+.sidebar-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     color: #333;
+}
+
+.sidebar-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.sidebar-content a {
+    color: #007bff;
     text-decoration: none;
-    font-size: 18px;
+}
+
+.sidebar-content a:hover {
+    text-decoration: underline;
+}
+
+.github {
+    margin-top: 50px;
+}
+
+.github-label {
+    font-size: 16px;
+}
+
+.github-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 20px;
+    width: 90%;
+    border: 1px solid #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none !important;
+}
+
+.github-logo {
+    width: 30px;
+    height: 30px;
 }
 
 .spinner-wrapper {
@@ -239,7 +284,7 @@ select {
     display: inline-block;
     opacity: 0;
     animation: letterAnimation 1s forwards;
-    animation-delay: calc(0.4s * var(--i));
+    animation-delay: calc(0.1s * var(--i));
 }
 
 @keyframes colorChange {
@@ -343,12 +388,23 @@ select {
     body {
         padding: 12px;
     }
+
+    .sidebar {
+        width: 85%;
+        right: -900px;
+    }
 }
 
 @media (max-width: 550px) {
     .hamburger-menu {
         top: 20px;
         right: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .sidebar {
+        width: 80%;
     }
 }
 
@@ -381,6 +437,22 @@ select {
     .card {
         padding: 16px;
     }
+
+    .sidebar {
+        overflow: scroll;
+    }
+
+    .sidebar-content h3 {
+        font-size: 23px;
+    }
+
+    .sidebar-content p {
+        font-size: 15px;
+    }
+
+    .github-label {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 300px) {
@@ -406,5 +478,36 @@ select {
     .hamburger-line {
         width: 27px;
         height: 2px;
+    }
+
+    .sidebar {
+        width: 70%;
+        padding-bottom: 100px;
+    }
+
+    .sidebar-content h3 {
+        font-size: 20px;
+    }
+
+    .sidebar-content p {
+        font-size: 13px;
+    }
+
+    .github-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 255px) {
+    .sidebar-content h3 {
+        font-size: 15px;
+    }
+
+    .sidebar-content p {
+        font-size: 10px;
+    }
+
+    .github-label {
+        font-size: 10px;
     }
 }
