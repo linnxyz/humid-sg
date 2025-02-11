@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="assets/favi.png" type="image/x-icon">
+    <title>HumidSG.io</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    </div>
+    <header class="header">
+        <img src="assets/logo.png" alt="HumidSG.io Logo" class="logo">
+        <h1 class="title">HumidSG.io</h1>
+    </header>
+
+
+    <div class="card wrap one">
+        <div class="humid-stat">
+            <div class="area-label">In your area:</div>
+            <h2 class="humidity" id="spec">62%</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="station-info">
+            <p class="station-text" >Station ID: <strong id="stationId"></strong></p>
+            <p class="station-text">Station Name: <strong id="stationName"></strong></p>
+        </div>
+
+        <div class="spinner-wrapper" id="spinnerWrapper">
+            <div class="spinner" id="spinner"></div>
+            <p class="error" id="error"></p>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="area-label">Average:</div>
+            <h2 class="humidity" id="avg">62%</h2>
+            <p class="description">
+                This value is calculated by averaging the humidity readings by all the weather stations throughout Singapore.
+            </p>
+        </div>
+
+        <div class="card">
+            <select id="stationSelect">
+            </select>
+            <h2 class="humidity" id="opt">62%</h2>
+        </div>
+    </div>
+
+    <p class="last-updated">
+        <a href="#" style="text-decoration: none;" onclick="reloadPage()">
+            <img class="reload-icon" src="assets/reload.svg" alt="Reload">
+        </a>
+        Last updated: <span id="lastUpdated"></span>
+    </p>
+
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="loader" id="loader">
+        <h1>HumidSG.io</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
