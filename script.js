@@ -172,7 +172,10 @@ function reloadPage() {
 }
 
 async function run() {
+    document.body.style.overflow = "hidden";
     await fetchAPI();
+    document.body.style.overflow = "auto";
+    
     const loader = document.getElementById("loader");
     loader.style.display = "none";
 
@@ -182,6 +185,7 @@ async function run() {
 
     const spinnerWrapper = document.getElementById("spinnerWrapper");
 
+    
     spinnerWrapper.style.display = "flex";
     await specHumidity();
     spinnerWrapper.style.display = "none";
@@ -198,22 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
         span.textContent = char;
         span.style.setProperty('--i', index);
         loaderText.appendChild(span);
-    });
-
-    const hamburgerMenu = document.getElementById('hamburgerMenu');
-    const sidebar = document.getElementById('sidebar');
-
-    hamburgerMenu.addEventListener('click', function() {
-        this.classList.toggle('active');
-        sidebar.classList.toggle('active');
-    });
-
-    // Close sidebar when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!hamburgerMenu.contains(event.target) && !sidebar.contains(event.target)) {
-            hamburgerMenu.classList.remove('active');
-            sidebar.classList.remove('active');
-        }
     });
 });
 

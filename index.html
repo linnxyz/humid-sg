@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hamburger-menu" id="hamburgerMenu">
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
-    </div>
     <header class="header">
         <img src="assets/logo.png" alt="HumidSG.io Logo" class="logo">
         <h1 class="title">HumidSG.io</h1>
@@ -46,8 +42,7 @@
         </div>
 
         <div class="card">
-            <select id="stationSelect">
-            </select>
+            <select id="stationSelect"></select>
             <h2 class="humidity" id="opt">62%</h2>
         </div>
     </div>
@@ -59,8 +54,8 @@
         Last updated: <span id="lastUpdated"></span>
     </p>
 
-    <div class="sidebar" id="sidebar">
-        <section class="sidebar-content">
+    <div class="about" id="about">
+        <section class="about-content">
             <h3>About HumidSG.io</h3>
             <p>
                 HumidSG.io provides real-time relative humidity data from various weather stations across Singapore. This data is sourced from the 
@@ -69,7 +64,7 @@
             </p>
         </section>
     
-        <section class="sidebar-content">
+        <section class="about-content">
             <h3>About This Project</h3>
             <p>
                 HumidSG.io is a personal passion project by me, Linn. 
@@ -80,17 +75,19 @@
             </p>
         </section>
     
-        <section class="sidebar-content github">
-            <span class="github-label">Visit my GitHub repository for documentation</span>
+        <section class="about-content">
+            <h3>Visit my GitHub repository for documentation</h3>
             <a href="https://github.com/yourusername/your-repo" target="_blank" class="github-button">
+                <img class="externel-link-logo" src="assets/externel-link.svg" alt="External Link">
                 <img class="github-logo" src="assets/github-mark.svg" alt="GitHub">
                 humid-sg
             </a>
         </section>
     </div>
-    
-    
-    
+
+    <footer class="footer">
+        <p>Made by <a href="#">Linn</a> ✨</p>
+    </footer>
 
     <div class="loader" id="loader">
         <h1>HumidSG.io</h1>
